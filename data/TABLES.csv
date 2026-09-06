@@ -1,0 +1,3 @@
+path,rows,columns
+results/reference/insurance_by_tenure.csv,2,htype | share_insured | count | mean | share_uninsured
+results/reference/insurance_logit_hazard_cluster_odds.csv,9,variable | odds_ratio | ci_low | ci_high | p

@@ -1,0 +1,17 @@
+{
+  "scope": "Selected original-analysis entry point",
+  "required_inputs": [
+    {
+      "path": "data/processed/regression/regression_dataset_with_bert_themes.csv",
+      "availability": "external; not bundled"
+    },
+    {
+      "path": "data/processed/factor_analysis/polychoric_fa/promax/factor_scores_with_ids.csv",
+      "availability": "external; not bundled"
+    },
+    {
+      "path": "data/processed/insurance/insurance_model_dataset.csv",
+      "availability": "external; not bundled"
+    }
+  ]
+}

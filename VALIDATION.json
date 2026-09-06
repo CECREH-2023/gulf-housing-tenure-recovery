@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-06",
+  "package": "gulf-housing-tenure-recovery",
+  "reproduction_scope": "Code and selected aggregate figures; controlled-access survey inputs required.",
+  "checks": {
+    "python_syntax": {
+      "files": 23,
+      "errors": []
+    },
+    "text_hygiene": {
+      "files": 38,
+      "findings": []
+    },
+    "relative_document_links": {
+      "broken": []
+    }
+  },
+  "scientific_checks": [
+    {
+      "check": "Full original analysis",
+      "status": "not run",
+      "reason": "The retained model scripts read regression, factor-score, and insurance tables under data/processed. Run with PYTHONPATH=. from the package root. R scripts provide additional inference checks. Retrieval indexes, respondent maps, survey records, and human-derived personas are excluded."
+    }
+  ],
+  "license_file_present": false
+}
