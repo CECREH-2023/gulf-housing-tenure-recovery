@@ -10,7 +10,7 @@ readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.11"
 authors = [
-    {name = "Jesse Andrews", email = "jrandre2@tamu.edu"}
+    {name = "Jesse Andrews", email = "jesseand@ttu.edu"}
 ]
 keywords = [
     "disaster research",
@@ -62,14 +62,11 @@ r-analysis = [
     # R dependencies managed separately via renv
 ]
 
-[project.scripts]
-gulf-hazard-ingest = "src.ingestion.interview_loader:main"
-
 [project.urls]
-Homepage = "https://github.com/jrandre2/Gulf_Hazard_Interview"
-Documentation = "https://github.com/jrandre2/Gulf_Hazard_Interview#readme"
-Repository = "https://github.com/jrandre2/Gulf_Hazard_Interview.git"
-Issues = "https://github.com/jrandre2/Gulf_Hazard_Interview/issues"
+Homepage = "https://github.com/CECREH-2023/gulf-housing-tenure-recovery"
+Documentation = "https://github.com/CECREH-2023/gulf-housing-tenure-recovery#readme"
+Repository = "https://github.com/CECREH-2023/gulf-housing-tenure-recovery.git"
+Issues = "https://github.com/CECREH-2023/gulf-housing-tenure-recovery/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

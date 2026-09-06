@@ -8,10 +8,11 @@
       "errors": []
     },
     "text_hygiene": {
-      "files": 38,
+      "files": 46,
       "findings": []
     },
     "relative_document_links": {
+      "checked": 49,
       "broken": []
     }
   },
@@ -22,5 +23,11 @@
       "reason": "The retained model scripts read regression, factor-score, and insurance tables under data/processed. Run with PYTHONPATH=. from the package root. R scripts provide additional inference checks. Retrieval indexes, respondent maps, survey records, and human-derived personas are excluded."
     }
   ],
-  "license_file_present": false
+  "license_file_present": false,
+  "documentation_review": {
+    "date": "2026-09-06",
+    "scope": "README, methods, setup, data definitions, provenance, citation guidance, and configuration entry points checked against distributed files and available source evidence. Original scientific-check scope remains as recorded below.",
+    "command_targets_checked": 2,
+    "findings": []
+  }
 }

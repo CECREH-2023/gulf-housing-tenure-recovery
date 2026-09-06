@@ -12,4 +12,4 @@ Construct hazard-aligned insurance measures and factor scores, join derived resp
 
 Gulf Coast disaster-recovery survey and associated coded measures.
 
-The retained model scripts read regression, factor-score, and insurance tables under data/processed. Run with PYTHONPATH=. from the package root. R scripts provide additional inference checks. Retrieval indexes, respondent maps, survey records, and human-derived personas are excluded.
+See [data availability](../data/README.md) for the release boundary and [the reproduction guide](REPRODUCING.md) for inputs, commands, and checks.

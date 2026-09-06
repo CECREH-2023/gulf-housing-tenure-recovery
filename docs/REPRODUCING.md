@@ -2,36 +2,33 @@
 
 Code and selected aggregate figures; controlled-access survey inputs required.
 
-## Verify the distribution
+## Software
 
-From the package root:
+Run from the repository root in a separate Python environment. The documented installation profile is:
 
 ```bash
-python scripts/check_package.py
-python scripts/check_inputs.py
+python -m pip install numpy pandas scipy statsmodels pydantic pydantic-settings
 ```
 
-The first command verifies the shipped files and hashes. The second checks whether separately acquired inputs are present and exits with code 2 when they are missing. Neither command estimates a statistical model.
+See [software requirements](SOFTWARE.md) for optional stages and environment limits.
 
-## Run the selected workflow
+## Run the workflow
 
 The retained model scripts read regression, factor-score, and insurance tables under data/processed. Run with PYTHONPATH=. from the package root. R scripts provide additional inference checks. Retrieval indexes, respondent maps, survey records, and human-derived personas are excluded.
-
-Use a disposable working copy when running the original analysis: several original scripts overwrite their project-relative output locations. Keep the distributed reference snapshot for comparison.
-
-Environment: `python -m pip install -e .`
 
 ```bash
 PYTHONPATH=. python src/analysis/run_recovery_models.py
 PYTHONPATH=. python src/analysis/run_insurance_models.py
 ```
 
-## Input contract
+Research scripts may overwrite their project-relative output files. Run analyses in a working copy and retain the checked-in reference results for comparison.
 
-Required paths are listed in [data/INPUTS.json](../data/INPUTS.json). Only code and selected aggregate figures are released. Responses, transcripts, demographic personas, and retrieval indexes are excluded.
+## Inputs
 
-[Source guide](CODE_MAP.md) identifies additional acquisition, sensitivity, and rendering modules. Original modeling and uncertainty procedures are retained. Use the documented input definitions; undocumented data substitutions can change the analysis.
+The exact external paths are listed in [data/README.md](../data/README.md) and [INPUTS.json](../data/INPUTS.json). `python scripts/check_inputs.py` checks their presence and exits with code 2 if any listed path is missing. It does not check the schema, verify access rights, or acquire upstream data.
 
-## Evidence
+## Verification scope
 
-[VALIDATION.json](../VALIDATION.json) records the checks performed on this snapshot. A partial model run or a fictional demo is identified by its limited scope. Full reproduction is claimed only where that record explicitly supports it.
+`python scripts/check_package.py` checks the distributed file hashes. It uses only the Python standard library and does not fit a model. Run it before generating outputs; new files outside the designated generated-results directory may be reported as extras.
+
+[VALIDATION.json](../VALIDATION.json) records the checks performed for this version and their limits. Inclusion of an analysis module is not evidence that it has been executed. The [source guide](CODE_MAP.md) identifies the distributed modules.

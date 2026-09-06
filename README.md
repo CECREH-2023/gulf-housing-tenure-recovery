@@ -1,8 +1,6 @@
 # Housing Tenure and Gulf Coast Disaster Recovery
 
-How are housing tenure and neighborhood attachment associated with insurance, displacement, and recovery burdens?
-
-Survey-based comparisons and adjusted models. Respondent-level data and qualitative material require controlled access; causal effects are not established by the associations.
+This study examines how housing tenure and neighborhood attachment are associated with insurance, displacement, and recovery burdens among Gulf Coast households. It combines survey summaries with adjusted statistical models.
 
 ## Results and interpretation
 
@@ -16,19 +14,19 @@ In the hazard-clustered adjusted model, renters have **0.411 times the odds of c
 - [Reference results](results/reference/)
 - [Methods](docs/METHODS.md)
 - [Reproduction and dependencies](docs/REPRODUCING.md)
-- [Analysis source guide](docs/CODE_MAP.md)
+- [Source guide](docs/CODE_MAP.md)
 - [Data sources and availability](data/README.md)
 
 ## Reproduce the work
 
-**Available reproduction:** Code and selected aggregate figures; controlled-access survey inputs required.
+Start with the [reproduction guide](docs/REPRODUCING.md) for the entry point, inputs, software, and validation limits.
 
-Start with `python scripts/check_package.py` to check the file manifest, then follow the [reproduction guide](docs/REPRODUCING.md). A file-integrity check does not rerun the research analysis. Only code and selected aggregate figures are released. Responses, transcripts, demographic personas, and retrieval indexes are excluded.
+**Scope:** Code and selected aggregate figures; controlled-access survey inputs required.
 
 ## Attribution and use
 
 The associated manuscript is “Tenure and Attachment in Post-Disaster Recovery: Evidence from 521 Households across the Gulf Corridor.”
 
-A research resource from [CECREH at Texas Tech University](https://www.depts.ttu.edu/cecreh/). Snapshot: September 6, 2026. For code citation, use the repository URL and the commit identifier for the version you used; see [citation guidance](CITATION.md).
+Maintained by [CECREH at Texas Tech University](https://www.depts.ttu.edu/cecreh/). Documentation reviewed September 6, 2026. Cite the repository version you used; see [citation guidance](CITATION.md).
 
-No additional reuse license is granted by this snapshot. Contact the authors through CECREH about permissions; source-data terms apply separately.
+The package metadata declares MIT terms; see [pyproject.toml](pyproject.toml). Source-data and third-party terms apply separately.
